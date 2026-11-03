@@ -101,8 +101,10 @@ public class LoanService {
         //           절사(버림)를 뜻하는 RoundingMode.DOWN 을 넣으세요!
         // Step 4. 마지막에 .longValueExact() 를 붙여 long 타입으로 반환하세요.
         // =====================================================================
-
-        return 0L; // TODO: 이 줄을 지우고 위 Step 1~4를 연결한 계산식을 반환하세요.
+    	return BigDecimal.valueOf(principal)
+    				.multiply(new BigDecimal(annualRate))
+    				.divide(BigDecimal.valueOf(12), 0, RoundingMode.DOWN)
+    				.longValueExact();
     }
 
     private static void sleep(long millis) {

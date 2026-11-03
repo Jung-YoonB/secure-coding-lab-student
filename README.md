@@ -13,6 +13,7 @@ IDE에서 프로젝트 내 `TODO`를 검색하거나 아래 파일을 열어 주
 |---|---|---|
 | **실습 문제 1** | 1) `src/main/resources/mapper/LoanMapper.xml`<br>2) `src/main/java/edu/secure/lab/mapper/LoanMapper.java` | 잔액 하한 조건(`balance >= #{minBalance}`)을 추가한 `findByCustomerMin` 바인딩 쿼리 및 메서드 작성 |
 | **실습 문제 3** | `src/main/java/edu/secure/lab/security/MaskingUtil.java` | 카드번호(`1234-5678-9012-3456`)의 가운데 자리를 마스킹(`1234-****-****-3456`)하는 `maskCard` 메서드 작성 |
+??
 | **실습 문제 5** | `src/main/java/edu/secure/lab/service/LoanService.java` | `BigDecimal`과 `RoundingMode.DOWN`을 사용해 월 이자를 원 단위 절사로 계산하는 `monthlyInterestTruncated` 메서드 작성 |
 
 > **자가 채점 방법**: 실습 문제 3번과 5번을 작성한 뒤 `src/test/java/edu/secure/lab/SecurityPracticeTest.java` 테스트를 실행(`mvn test` 또는 IDE에서 Run Test)하면 정답 여부를 즉시 확인할 수 있습니다!

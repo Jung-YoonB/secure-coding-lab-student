@@ -26,6 +26,7 @@ public interface LoanMapper {
     //    - @Param("customerId") String customerId
     //    - @Param("minBalance") long minBalance
     // TODO: 여기에 findByCustomerMin 메서드를 선언하세요.
+    List<Loan> findByCustomerMin(@Param("customerId") String customerId, @Param("minBalance") long minBalance);
 
 
     /** ORDER BY 는 바인딩할 수 없어 ${} 를 쓴다. 호출 전에 허용 목록 검증이 필수다. */

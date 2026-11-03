@@ -31,13 +31,12 @@
             - SQL 조건식 예시: WHERE customer_id = ... AND balance >= ...
          4. 이 파일 작성이 끝나면 LoanMapper.java 파일로 이동해 (2/2) 단계도 완성하세요.
     ========================================================================== -->
-    <!--
     <select id="findByCustomerMin" resultType="edu.secure.lab.domain.Loan">
         SELECT loan_id, customer_id, balance, status
           FROM loan
-         WHERE 여기에_안전한_바인딩_조건을_작성하세요
+         WHERE customer_id = #{customerId}
+         AND balance >= #{minBalance}
     </select>
-    -->
 
     <!-- ORDER BY 컬럼명은 바인딩 불가. Service 에서 허용 목록으로 검증한 값만 전달해야 한다 -->
     <select id="findByCustomerSorted" resultType="edu.secure.lab.domain.Loan">
